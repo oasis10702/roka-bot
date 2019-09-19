@@ -1,1 +1,1 @@
-worker: node src/index.js
+worker: npx babel-node src/index.js
