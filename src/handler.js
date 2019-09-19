@@ -10,7 +10,7 @@ const KeywordHandler = (message, client) => {
       replies.HugReplier(message);
       break;
     default:
-      if (message.content.indexOf(client.user)) {
+      if (message.content.indexOf(client.user) !== -1) {
         replies.ConfuseReplier(message);
       }
       break;
