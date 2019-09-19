@@ -9,6 +9,8 @@ const KeywordHandler = (message, client) => {
     case "熊熊":
       replies.HugReplier(message);
       break;
+    case "睡覺":
+      replies.HelpTunkInReplier(message);
     default:
       if (message.content.indexOf(client.user) !== -1) {
         replies.ConfuseReplier(message);
