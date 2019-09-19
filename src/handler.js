@@ -1,10 +1,10 @@
 import * as replies from "./replier";
 
 const Handler = ({ message, client }) => {
-  return KeywordHandler(message);
+  return KeywordHandler(message, client);
 };
 
-const KeywordHandler = message => {
+const KeywordHandler = (message, client) => {
   switch (message.content) {
     case "熊熊":
       replies.HugReplier(message);
