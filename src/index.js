@@ -11,6 +11,9 @@ client.on("message", message => {
   if (message.content === "ping") {
     message.reply("pong");
   }
+  if (message.content === "熊熊") {
+    message.reply("囉卡熊要抱抱！");
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
