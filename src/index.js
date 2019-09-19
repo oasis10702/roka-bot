@@ -10,10 +10,13 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
+  if (message.author.bot) {
+    return null;
+  }
   if (message.content === "ping") {
-    message.reply("pong");
+    return message.reply("pong");
   } else {
-    Handler(message);
+    return Handler(message);
   }
 });
 
