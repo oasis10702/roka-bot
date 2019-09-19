@@ -1,6 +1,6 @@
 import Discord from "discord.js";
 
-import Handler from './handler';
+import Handler from "./handler";
 
 const client = new Discord.Client();
 const BOT_TOKEN = "NjIxOTQwNTM0MjA2MDA1Mjcw.XYMT0g.mc1YfoKATNQjZMqijBdYNjKr07k";
@@ -16,7 +16,7 @@ client.on("message", message => {
   if (message.content === "ping") {
     return message.reply("pong");
   } else {
-    return Handler(message);
+    return Handler({ message, client });
   }
 });
 
